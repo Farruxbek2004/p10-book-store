@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{ book.title }}</h1>
+        <h2>Category: {{ book.category.name }}</h2>
+        <h2>Description: {{ book.description }}</h2>
+        <h2>Price: {{ book.price }}</h2>
+        <h2>Publication year: {{ book.pub_year }}</h2>
+        <h2>Page size: {{ book.page_size }}</h2>
+        <h2>Language: {{ book.lang }}</h2>
+        <h2>Author: {{ book.author.name }}</h2>
+    </div>
+{% endblock %}
