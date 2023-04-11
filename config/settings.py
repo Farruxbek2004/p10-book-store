@@ -13,6 +13,7 @@ import os
 import environ
 from pathlib import Path
 
+AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',)
 env = environ.Env(
     DEBUG=(bool, False)
 )
@@ -106,9 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LOGIN_REDIRECT_URL = "homepage"
+LOGIN_URL = "account:login"
+LOGIN_REDIRECT_URL = "account:profile"
 LOGOUT_REDIRECT_URL = "homepage"
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 

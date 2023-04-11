@@ -53,3 +53,18 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #3e8e41;
 }
+
+.images {
+    width: 600px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: cyan;
+}
+
+.card-img-top {
+    width: 560px;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}

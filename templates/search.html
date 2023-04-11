@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    HomePage
+    Search
 {% endblock %}
 
 {% block content %}
     <div class="container custom-home">
         <div class="row">
-            {% for book in books %}
+            {% for book in results %}
                 <div class="col-md-4 card border">
                     <div class="card border mb-4 box-shadow h-50">
                         <img class="card-img-top" src="{{ book.image.url }}" alt="Bu Yerda Rasm Bor!">
