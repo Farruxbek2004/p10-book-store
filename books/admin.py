@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Author, Book, Category
+from books.models import Book, Category, Author, Tag, WishList
 
 
 @admin.register(Book)
@@ -9,5 +9,7 @@ class BookAdmin(admin.ModelAdmin):
     readonly_fields = ["category", "page_size"]
 
 
+admin.site.register(WishList)
+admin.site.register(Tag)
 admin.site.register(Author)
 admin.site.register(Category)
