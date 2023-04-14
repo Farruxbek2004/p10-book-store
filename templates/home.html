@@ -16,7 +16,7 @@
                                 <a href="{% url 'book_detail' book.id %}">{{ book.title }}</a>
                             </h5>
                             {% if book.description|length > 80 %}
-                                <p class="card-text">{{ book.description|slice:80 }}</p>
+                                <p class="card-text">{{ book.description|slice:50 }}</p>
                             {% else %}
                                 <p class="card-text">{{ book.description }}</p>
                             {% endif %}

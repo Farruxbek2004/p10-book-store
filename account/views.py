@@ -5,8 +5,7 @@ from django.contrib.auth.views import LoginView
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import FormView
-
-from account.forms import CustomAuthenticationForm, UserRegistrationForm
+from account.forms import CustomAuthenticationForm
 
 
 class AccountLoginView(LoginView):
@@ -27,15 +26,6 @@ def custom_login(request):
             return redirect("account:profile")
     return render(request, "account/login.html", {"form": form})
 
-
-
-# class UserProfile(DetailView):
-#     model = User
-#     pk_url_kwarg = None
-#     query_pk_and_slug = None
-#
-#     def get_queryset(self):
-#         return self.request.user
 
 @login_required
 def profile(request):
