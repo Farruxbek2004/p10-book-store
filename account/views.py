@@ -98,3 +98,4 @@ def profile_delete(request):
     user = request.user
     user.delete()
     return redirect("homepage")
+

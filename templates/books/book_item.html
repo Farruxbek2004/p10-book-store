@@ -10,12 +10,11 @@
             {% else %}
                 <p class="card-text">{{ book.description }}</p>
             {% endif %}
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a href="{% url 'book_detail' book.id %}" class="btn btn-sm btn-outline-secondary">
-                        More
-                    </a>
-                </div>
+            < class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+                <a href="{% url 'book_detail' book.id %}" class="btn btn-sm btn-outline-secondary">
+                    More
+                </a>
             </div>
         </div>
     </div>

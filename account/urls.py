@@ -1,6 +1,5 @@
 from django.contrib.auth.views import LogoutView
 from django.urls import path
-
 from account.views import custom_login, profile, RegisterView, profile_edit, profile_delete
 
 app_name = "account"
