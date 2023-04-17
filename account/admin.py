@@ -12,3 +12,6 @@ class UserAdmin(admin.ModelAdmin):
 
 
 admin.site.register(User, UserAdmin)
+
+# password: farruxbek
+# parol: 123

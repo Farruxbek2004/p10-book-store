@@ -4,10 +4,11 @@
     <h1>Login</h1>
     <form action="{% url 'account:login' %}" method="post">
         {% csrf_token %}
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        {{ form.as_p }}
+        {#        <label for="username">Username:</label>#}
+        {#        <input type="text" id="username" name="username">#}
+        {#        <label for="password">Password:</label>#}
+        {#        <input type="password" id="password" name="password">#}
         <input type="submit" value="Login">
     </form>
 

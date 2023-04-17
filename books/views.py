@@ -1,7 +1,8 @@
 from django.db.models import Q
-from django.shortcuts import render
-from django.views.generic import ListView, DetailView, TemplateView
+from django.shortcuts import render, redirect
+from django.views.generic import ListView, DetailView, TemplateView, CreateView
 from books.models import Book
+from books.forms import BookAddForm
 
 
 class BaseView(TemplateView):
@@ -33,10 +34,16 @@ class BooksListView(ListView):
     context_object_name = "books"
 
 
+class BookAddView(CreateView):
+    model = Book
+    form_class = BookAddForm
+    template_name = "books/book_add.html"
+
+
 class BookDetailView(DetailView):
     queryset = Book.objects.all()
     template_name = "books/book_detail.html"
-    context_object_name = "book"
+    context_object_name = "books"
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)

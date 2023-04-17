@@ -6,18 +6,26 @@
     <div class="container mt-5 mb-3">
         <div class="row">
             <div class="col-md-6">
-                <img src="{{ book.image.url }}" alt="Product Image" class="img-fluid">
+                <img src="{{ books.image.url }}" alt="Product Image" class="img-fluid">
             </div>
             <div class="col-md-6">
-                <h2>{{ book.title }}</h2>
-                <p>{{ book.description }}</p>
-                <p><b>Author:</b> {{ book.author.name }}</p>
-                <p><b>Publication:</b> {{ book.pub_year }}</p>
-                <p><b>Publication date:</b> {{ book.page_size }}</p>
-                <p><b>Language:</b> {{ book.lang }}</p>
-                <h3>Price: {{ book.price }}</h3>
+                <h2>{{ books.title }}</h2>
+                <p>{{ books.description }}</p>
+                <p><b>Author:</b> {{ books.author.name }}</p>
+                <p><b>Publication:</b> {{ books.pub_year }}</p>
+                <p><b>Publication date:</b> {{ books.page_size }}</p>
+                <p><b>Language:</b> {{ books.lang }}</p>
+                <h3>Price: {{ books.price }}</h3>
                 <button class="btn btn-primary">Add to Cart</button>
             </div>
+        </div>
+        <div class="row">
+            <h2>Found {{ book.images_count }} images</h2>
+            {% for book_image in book.images.all %}
+                <div class="col-md-6">
+                    <img src="{{ book_image.image.url }}">
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
